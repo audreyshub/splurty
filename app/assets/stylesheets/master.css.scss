@@ -40,7 +40,6 @@
 	font-size: 25px;
 	border-bottom: 1px solid #dfdfdf;
     font-family: 'amblelight', sans-serif;
-    margin-left: 20px;
 }
 
 header {
@@ -79,3 +78,21 @@ h2 {
     text-decoration:none;
 }
 
+@media (max-width: 750px) {
+    .footer-blurb {
+        text-align: left;
+    }
+}
+
+.modal {
+    font-family: 'amblebold', sans-serif;
+}
+
+h2 span {
+    color: #c2c2c2;
+    font-family: 'amblebold', sans-serif;
+}
+
+::selection {
+    background-color: #f84342;
+}
