@@ -24,10 +24,41 @@
 			Splurting out unsolicited life lessons since 2015
 		</div>
 		<div class="col-xs-5 links">
-			<%= link_to 'Contribute', new_quote_path %>
+			<!-- Button trigger modal -->
+			<%= link_to 'Contribute', '#', :data => {:toggle => 'modal', :target => '#myModal'} %>
 			<%= link_to 'About', about_path %>
 		</div>
 	</header>
+
+	<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Contribute Your Quote</h4>
+      </div>
+      <%= simple_form_for Quote.new do |f| %>
+      	<div class="modal-body">
+			<%= f.input :saying %>
+			<%= f.input :author %>
+			<br />
+			<%= f.submit 'Create', :class => 'btn btn-danger' %>
+		</div>
+      <% end %>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 	<hr />
 	<br class="clear" />
 
