@@ -64,7 +64,7 @@ h2 {
     font-family: 'geometric sans', sans-serif;
     font-size:20px;
     border-bottom: 1px solid #f84342;
-    
+
 }
 
 
@@ -123,3 +123,8 @@ a:link {
     color: #f84342;
 }
 
+.img-responsive {
+    border-radius: 50%;
+    
+    border: 1px solid #ccc;
+}
