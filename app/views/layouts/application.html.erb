@@ -31,10 +31,7 @@
 		</div>
 	</header>
 
-	<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-  Launch demo modal
-</button>
+
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -49,19 +46,20 @@
 			<%= f.input :saying, :label => "What is the saying you want to add?", :placeholder => "Do. Or do not. There is no try." %>
 			<%= f.input :author, :label => "Who is the author of the quote?", :placeholder => 'Yoda' %>
 			<br />
-			<%= f.submit 'Create', :class => 'btn btn-danger' %>
+			
 		</div>
+      
+	     <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        <%= f.submit 'Add Quote', :class => 'btn btn-danger' %>
+	     </div>
       <% end %>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
     </div>
   </div>
 </div>
 
-	<hr />
-	<br class="clear" />
+<hr />
+<br class="clear" />
 
 <div class="container">
 	<% if flash[:error].present? %>
